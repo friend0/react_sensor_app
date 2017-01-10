@@ -23,9 +23,12 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname,
-    publicPath: 'http://0.0.0.0:8080/',
+    path: path.resolve(__dirname, 'public/'),
     filename: "client.min.js"
+  },
+  devtool: 'source-map',
+  devServer:{
+    contentBase: 'public'
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
