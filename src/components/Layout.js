@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
+import Footer from "./layout/Footer";
+import Nav from "./layout/Nav";
 import logo from './logo.svg';
-import './Layout.css';
+import  './Layout.css';
 
-class Layout extends Component {
+export default class Layout extends Component {
+  navigate() {
+    this.props.history.replaceState(null, "/");
+  }
   render() {
+    const { history } = this.props;
+    const { location } = this.props;
+    const containerStyle = {
+      marginTop: "60px"
+    };
     return (
       <div className="Layout">
-        <div className="Layout-header">
+        <Nav location={location} />
+        <div className="Layout-Header">
           <img src={logo} className="Layout-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="Layout-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <div className="container" style={containerStyle}>
+          <div class="row">
+            <div class="col-lg-12">
+              {this.props.children}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
-
-export default Layout;
