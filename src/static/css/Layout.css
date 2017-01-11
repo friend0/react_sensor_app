@@ -1,3 +1,9 @@
+.icon-bar {
+  color: black;
+  border-color: white;
+  background-color: #C7C9CA;
+}
+
 .Layout {
   text-align: center;
 }
@@ -6,7 +12,7 @@ h2 {
     color: #C7C9CA;
 }
 .Layout-logo {
-  animation: Layout-logo-spin infinite 5s cubic-bezier(.99,.0,.01,1);
+  animation: Layout-logo-spin infinite 7s cubic-bezier(.99,.0,.01,1);
   height: 80px;
 }
 
@@ -25,12 +31,13 @@ h2 {
 
 @keyframes Layout-logo-spin {
     0% { transform: rotateY(0deg); }
-    100% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
 }
 
 .navbar .navbar-brand {
-  color: #CC0000;
+  color: #C7C9CA;
 }
+
 .navbar ..navbar-brand:hover,
 .navbar .navbar-brand:focus {
   color: #CC0000;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Footer from "./Footer";
 import Nav from "./Nav";
-import logo from './logo.svg';
-import  './Layout.css';
+import logo from '../../static/tesla_motors.svg';
+import  '../../static/css/Layout.css';
 
 export default class Layout extends Component {
   navigate() {
@@ -19,7 +19,7 @@ export default class Layout extends Component {
         <Nav location={location} />
         <div className="Layout-Header">
           <img src={logo} className="Layout-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2> Panopticon</h2>
         </div>
           <div className="container" style={containerStyle}>
           <div class="row">
