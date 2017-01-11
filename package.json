@@ -32,6 +32,7 @@
   "scripts": {
     "dev": "webpack-dev-server --content-base src --inline --hot",
     "start": "SET NODE_ENV=production & babel-node --presets 'react,es2015' src/server.js",
+    "start:server": "node server",
     "build": "SET NODE_ENV=production & webpack -p",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
