@@ -19,7 +19,7 @@ export default class Layout extends Component {
         <Nav location={location} />
         <div className="Layout-Header">
           <img src={logo} className="Layout-logo" alt="logo" />
-          <h2> Panopticon</h2>
+          <h2 color="#61DAFB"> Panopticon</h2>
         </div>
           <div className="container" style={containerStyle}>
           <div class="row">
