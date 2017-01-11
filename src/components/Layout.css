@@ -2,8 +2,11 @@
   text-align: center;
 }
 
+h2 {
+    color: #C7C9CA;
+}
 .Layout-logo {
-  animation: Layout-logo-spin infinite 20s linear;
+  animation: Layout-logo-spin infinite 5s cubic-bezier(.99,.0,.01,1);
   height: 80px;
 }
 
@@ -19,7 +22,23 @@
   font-size: large;
 }
 
+
 @keyframes Layout-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(180deg); }
+}
+
+.navbar .navbar-brand {
+  color: #CC0000;
+}
+.navbar ..navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #CC0000;
+}
+.navbar .navbar-text {
+  color: #CC0000;
+}
+
+.navbar .navbar-nav > li > a {
+  color: #C7C9CA;
 }

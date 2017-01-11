@@ -24,7 +24,7 @@ export default class Nav extends React.Component {
     const navClass = collapsed ? "collapse" : "";
 
     return (
-      <nav class="navbar navbar-toggleable-md" role="navigation">
+      <div class="navbar navbar-toggleable-md" role="navigation">
           <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -32,7 +32,7 @@ export default class Nav extends React.Component {
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand"  href="#">
               Tesla Panopticon
             </a>
           </div>
@@ -52,7 +52,7 @@ export default class Nav extends React.Component {
               </li>
             </ul>
           </div>
-      </nav>
+      </div>
     );
   }
 }
