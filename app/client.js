@@ -1,14 +1,24 @@
 import React from 'react';
 import {Router} from 'react-router';
-import {createHistory} from 'history';
-import {render} from 'react-dom';
-
+import ReactDOM from 'react-dom';
+import {browserHistory} from 'react-router';
 import routes from './routes';
 
 process.APP_STATE = window.APP_STATE || {};
 
-render((
-    <Router history={createHistory()}>
-        {routes}
-    </Router>
-), document.querySelectorAll('[data-ui-role="content"]')[0]);
+
+
+class AppRoutes extends React.Component {
+    render() {
+        return (
+            <Router routes={routes}
+                    onUpdate={() => window.scrollTo(0, 0)}/>
+        );
+    }
+}
+
+console.log('SHIT!!!');
+process.APP_STATE = window.APP_STATE || {};
+window.onload = () => {
+    ReactDOM.render(<AppRoutes history={browserHistory}/>, document.getElementById('root'));
+};
