@@ -4,14 +4,14 @@ import {IndexRoute, Route} from 'react-router';
 import App from './components/app';
 import NoMatch from './components/common/NoMatch';
 
-import Dashboard from './components/dashboard/Dashboard';
 import LatestBills from './components/bill/LatestBills';
+import Live from './components/live/live';
 
 export default (
     <Route path="/" component={App}>
-        <Route component={Dashboard}>
-            <IndexRoute component={LatestBills}/>
-        </Route>
+        <IndexRoute component={LatestBills}> </IndexRoute>
+        <Route path="/live" component={Live}/>
         <Route path="*" component={NoMatch}/>
     </Route>
 );
+

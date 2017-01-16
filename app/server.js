@@ -1,6 +1,5 @@
 import express from 'express';
 import nconf from 'nconf';
-
 import configManager from './infra/config-manager';
 import middlewareManager from './infra/middleware-manager';
 import routeManager from './infra/route-manager';
