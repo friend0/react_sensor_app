@@ -1,7 +1,9 @@
 # Naive Universal Application
 
-> Other variants of the application, along with their short description are linked from
-> [master](https://github.com/zen-js-code/react-universal-web-apps/) branch.
+In building this app, I first started with facebook create-react-app tool.
+After becoming comfortable creating and using components, I used a second base project for building a universla app using express.
+I did an initial merge from the original repo into the new universal app, and continued development.
+After the app was up and running with the components I'd developed, I merged the universal app back into the original appcreated with Facebook's tool.
 
 ## Installation & Execution
 
@@ -23,12 +25,6 @@ You can access the application's server directly under http://localhost:6001 or 
 
 The idea behind this version of the application is to:
 
-1. render HTML on server, based on data necessary
-2. deliver the HTML to the browser
-3. send the data , used to render the HTML, to the browser as well
-4. allow React to resolve the necessary re-renders
-5. profit
-
-**Structurally, it can be shown like this:**
-
-![Application Components](simple-ssr-app-structure-1.png)
+1. Render sensor data in the main view
+2. Offer interfaces to various calculators, and backup features.
+3. Future - component refactoring, sensor interaction, VISUALIZATION (d3?)

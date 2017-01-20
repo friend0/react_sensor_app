@@ -15,8 +15,7 @@ const configManager = Object.assign({}, baseManager, {
 
         app.set('views', PATH.resolve(__dirname, ROOT, nconf.get('templateRoot')));
 
-        app.engine('html', require('ejs').renderFile);
-        app.set('view engine', 'html');
+        app.set('view engine', 'jade');
     }
 });
 
