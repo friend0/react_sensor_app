@@ -5,12 +5,8 @@ block content
 		#{title}
 	form#formAddBlob(name="addblob",method="post",action="/blobs")
 		p Name: 
-			input#inputName(type="text", placeholder="ex. John Smith", name="name")
-		p Badge:
-			input#inputBadge(type="number", placeholder="ex. 123456", name="badge")
-		p DOB: 
-			input#inputDob(type="date", name="dob")
-		p Are You Loved?: 
-			input#inputIsLoved(type="checkbox", name="isloved")
+			input#inputName(type="text", placeholder="ex. BIW1-BPL010RB1", name="hostname")
+		p OPC Enabled?:
+			input#inputOpc(type="radio", name="opcEnabled")
 		p
 			button#btnSubmit(type="submit") submit

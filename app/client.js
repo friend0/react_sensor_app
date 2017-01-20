@@ -2,11 +2,9 @@ import React from 'react';
 import {Router} from 'react-router';
 import ReactDOM from 'react-dom';
 import {browserHistory} from 'react-router';
-import routes from './routes';
+import routes from './routes/routes';
 
 process.APP_STATE = window.APP_STATE || {};
-
-
 
 class AppRoutes extends React.Component {
     render() {
@@ -17,7 +15,7 @@ class AppRoutes extends React.Component {
     }
 }
 
-console.log('SHIT!!!');
+console.log('Running Client');
 process.APP_STATE = window.APP_STATE || {};
 window.onload = () => {
     ReactDOM.render(<AppRoutes history={browserHistory}/>, document.getElementById('root'));

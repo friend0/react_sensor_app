@@ -35,7 +35,7 @@ export default class Nav extends React.Component {
                 </button>
                 <div className='navbar-header'>
                     <a className='navbar-brand'href='#'>
-                        Tesla Panopticon
+                        Panopticon
                     </a>`
                 </div>
                 <div className={'navbar-collapse ' + navClass}
@@ -46,16 +46,12 @@ export default class Nav extends React.Component {
                                 Featured</IndexLink>
                         </li>
                         <li activeClassName='active'>
-                            <Link to='archives' onClick={this.toggleCollapse.bind(this)}>
+                            <Link to='/calculator' onClick={this.toggleCollapse.bind(this)}>
+                                Rotations and Transformations</Link>
+                        </li>
+                        <li activeClassName='active'>
+                            <Link to='/archives' onClick={this.toggleCollapse.bind(this)}>
                                 Archives</Link>
-                        </li>
-                        <li activeClassName='active'>
-                            <Link to='settings' onClick={this.toggleCollapse.bind(this)}>
-                                Settings</Link>
-                        </li>
-                        <li activeClassName='active'>
-                            <Link to='robotHUD' onClick={this.toggleCollapse.bind(this)}>
-                                RobotHUD</Link>
                         </li>
                     </ul>
                 </div>

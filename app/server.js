@@ -7,8 +7,6 @@ import assetsManager from './infra/assets-manager';
 import mongoose from 'mongoose';
 
 const app = express();
-const url = 'mongodb://rowdy_rye:rowdy_rye@ds161038.mlab.com:61038/sensor_lake';
-
 
 configManager.handle(app);
 middlewareManager.handle(app);
@@ -19,16 +17,16 @@ configManager.handle(app);
 middlewareManager.handle(app);
 assetsManager.handle(app);
 routeManager.handle(app);
-console.log('FUCK!!');
 
-mongoose.connect(url, (err) => {
-    if (err) {
-        return console.log(err);
-    }
-    console.log('Connected to db.');
-    app.listen(nconf.get('port'), () => {
-        console.log('Listening on http://' + nconf.get('host') + ':' + nconf.get('port'));
-    });
+console.log('Running Server');
+// Not used here, but do not remove!!
+// todo: refactor db inits to be 'in-line' here
+const db = require('./models/db');
+const robotSchema = require('./models/robot_schema');
+
+app.listen(nconf.get('port'), () => {
+    console.log('Listening on http://' + nconf.get('host') + ':' + nconf.get('port'));
 });
+
 
 
