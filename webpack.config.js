@@ -5,7 +5,7 @@ var path = require('path');
 
 module.exports = {
   context: path.join(__dirname, "src"),
-  entry: "./client.js",
+  entry: "./components/app/client.js",
   module: {
     loaders: [
         {test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery' },
@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'public/'),
+    path: path.resolve(__dirname, 'app/static/js'),
     filename: "client.min.js"
   },
   devtool: 'source-map',
