@@ -38,7 +38,9 @@ h2 {
   color: #C7C9CA;
 }
 
-.navbar ..navbar-brand:hover,
+.navbar .navbar-brand:hover{
+  color: #CC0000;
+}
 .navbar .navbar-brand:focus {
   color: #CC0000;
 }

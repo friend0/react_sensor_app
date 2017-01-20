@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'src/static/js'),
+    path: path.resolve(__dirname, 'app/static/js'),
     filename: "client.min.js"
   },
   devtool: 'source-map',
