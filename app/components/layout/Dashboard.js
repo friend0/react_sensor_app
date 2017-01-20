@@ -1,17 +1,20 @@
 import React from 'react';
 import Nav from './Nav';
+import Header from './Header';
 
 export default class Dashboard extends React.Component {
     render() {
         const containerStyle = {
-            marginTop: '60px'
+            marginTop: '60px',
+            color: 'white'
         };
+
+        console.log(this.props);
         return (
             <div className="Layout">
                 <Nav location={this.props.location}/>
-                <div className="Layout-Header">
-                    <h1> Panopticon</h1>
-                </div>
+                <Header root={this.props.props.route.path}/>
+
                 <div className="container" style={containerStyle}>
                     <div className="row">
                         <div className="col-lg-12">
